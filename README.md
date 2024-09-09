@@ -4,7 +4,7 @@ Desarrollo ejercicios reto 12:
 
 **1. Consulte que hacen los siguientes métodos de strings en python: endswith, startswith, isalpha, isalnum, isdigit, isspace, istitle, islower, isupper.**
 
-#Desarrollo:#
+*Desarrollo:*
 
 - `endswith(suffix)`:
 
@@ -57,7 +57,8 @@ Ejemplo: `"HELLO".isupper()` → True
 - Cantidad de consonantes
 - Listado de las 50 palabras que más se repiten
 
-##Desarrollo: 
+*Desarrollo:*
+
 ```python
 ```
 
