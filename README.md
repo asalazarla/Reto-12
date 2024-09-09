@@ -4,6 +4,8 @@ Desarrollo ejercicios reto 12:
 
 **1. Consulte que hacen los siguientes métodos de strings en python: endswith, startswith, isalpha, isalnum, isdigit, isspace, istitle, islower, isupper.**
 
+##Desarrollo:
+
 - `endswith(suffix)`:
 
 Verifica si la cadena termina con el sufijo especificado. Devuelve True si es así, de lo contrario False.
@@ -49,12 +51,13 @@ Ejemplo: `"hello".islower()` → True
 Devuelve True si todos los caracteres alfabéticos de la cadena son mayúsculas y hay al menos una letra. Si no hay letras o alguna es minúscula, devuelve False.
 Ejemplo: `"HELLO".isupper()` → True
 
-**2. Procesar el  <a href="https://www.py4e.com/code3/mbox.txt">archivo</a> y extraer:
+**2. Procesar el  <a href="https://www.py4e.com/code3/mbox.txt">archivo</a> y extraer:**
 
 - Cantidad de vocales
 - Cantidad de consonantes
 - Listado de las 50 palabras que más se repiten
 
+##Desarrollo: 
 ```python
 ```
 
