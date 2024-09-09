@@ -58,8 +58,54 @@ Ejemplo: `"HELLO".isupper()` → True
 - Listado de las 50 palabras que más se repiten
 
 *Desarrollo:*
+Para poder relizar el punto principalmente se creó un code que cumple con la función de extraer lo que se pide del archivo, a continuación este:
 
 ```python
+import string
+from collections import Counter
+
+# Función para contar vocales y consonantes
+def contar_vocales_consonantes(texto):
+    vocales = "aeiouAEIOU"
+    num_vocales = 0
+    num_consonantes = 0
+    for letra in texto:
+        if letra.isalpha():
+            if letra in vocales:
+                num_vocales += 1
+            else:
+                num_consonantes += 1
+    return num_vocales, num_consonantes
+
+# Función para extraer las 50 palabras más comunes
+def palabras_mas_comunes(texto, num_palabras=50):
+    # Eliminar signos de puntuación
+    texto = texto.translate(str.maketrans('', '', string.punctuation))
+    # Convertir el texto en una lista de palabras
+    palabras = texto.lower().split()
+    # Contar la frecuencia de cada palabra
+    contador_palabras = Counter(palabras)
+    # Obtener las palabras más comunes
+    palabras_comunes = contador_palabras.most_common(num_palabras)
+    return palabras_comunes
+
+# Leer el archivo de texto
+with open('archivo.txt', 'r', encoding='utf-8') as archivo:
+    contenido = archivo.read()
+
+# Contar vocales y consonantes
+vocales, consonantes = contar_vocales_consonantes(contenido)
+
+# Obtener las 50 palabras más comunes
+palabras_comunes = palabras_mas_comunes(contenido)
+
+# Mostrar los resultados
+print(f"Cantidad de vocales: {vocales}")
+print(f"Cantidad de consonantes: {consonantes}")
+print("Las 50 palabras más comunes son:")
+for palabra, frecuencia in palabras_comunes:
+    print(f"{palabra}: {frecuencia}")
 ```
+En el momento en que se ejecuta y carga el archivo se obtiene que:
 
 
